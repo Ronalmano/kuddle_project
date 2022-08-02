@@ -14,10 +14,10 @@ class DanceClass extends StatefulWidget {
     required this.name,
     super.key,
   });
-  State<DanceClass> createState() => _GymClassState();
+  State<DanceClass> createState() => _DanceClassState();
 }
 
-class _GymClassState extends State<DanceClass> {
+class _DanceClassState extends State<DanceClass> {
   // List<String> cl = [];
   // List<String> wait = [];
 
@@ -32,6 +32,9 @@ class _GymClassState extends State<DanceClass> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Center(child: Text("Dance Class")),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -88,6 +91,7 @@ class _GymClassState extends State<DanceClass> {
 
   Widget printcheck() {
     int n = widget.cdance.cl.length;
+    // Printing the names of the members of the class
     for (int i = 0; i < n; i++) {
       log(widget.cdance.cl[i].toString());
     }

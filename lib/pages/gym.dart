@@ -32,6 +32,9 @@ class _GymClassState extends State<GymClass> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Center(child: Text("Gym Class")),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -87,6 +90,7 @@ class _GymClassState extends State<GymClass> {
   }
 
   Widget printcheck() {
+    // Printing the names of the members of the class
     int n = widget.cgym.cl.length;
     for (int i = 0; i < n; i++) {
       log(widget.cgym.cl[i].toString());

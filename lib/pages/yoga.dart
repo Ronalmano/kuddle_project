@@ -14,10 +14,10 @@ class YogaClass extends StatefulWidget {
     required this.name,
     super.key,
   });
-  State<YogaClass> createState() => _GymClassState();
+  State<YogaClass> createState() => _YogaClassState();
 }
 
-class _GymClassState extends State<YogaClass> {
+class _YogaClassState extends State<YogaClass> {
   // List<String> cl = [];
   // List<String> wait = [];
 
@@ -32,6 +32,9 @@ class _GymClassState extends State<YogaClass> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Center(child: Text("Yoga Class")),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -88,6 +91,7 @@ class _GymClassState extends State<YogaClass> {
 
   Widget printcheck() {
     int n = widget.cyoga.cl.length;
+    // Printing the names of the members of the class
     for (int i = 0; i < n; i++) {
       log(widget.cyoga.cl[i].toString());
     }
